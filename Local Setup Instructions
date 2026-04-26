@@ -1,0 +1,15 @@
+# 1. Clone or download the project
+git clone 
+cd deccan-ai
+
+# 2. Install dependencies
+npm install
+
+# 3. Create .env file
+cp .env.example .env
+# Edit .env with your API keys:
+# OPENAI_API_KEY=your_key
+# GOOGLE_SHEETS_API_KEY=your_key
+
+# 4. Run the application
+npm start
