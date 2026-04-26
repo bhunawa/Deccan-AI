@@ -1,0 +1,205 @@
+Input-Job Description
+{
+  "job_description": "Senior Software Engineer - Full Stack\n\nWe are looking for a Senior Software Engineer to join our growing engineering team. \n\nRequirements:\n- 5+ years of experience in software development\n- Strong proficiency in JavaScript/TypeScript, React, and Node.js\n- Experience with cloud platforms (AWS or GCP)\n- Strong understanding of database design (SQL and NoSQL)\n- Experience with RESTful APIs and GraphQL\n- Excellent problem-solving skills\n- Strong communication skills\n\nNice to have:\n- Experience with DevOps practices (CI/CD, Docker, Kubernetes)\n- Experience in fintech or payments industry\n- Open source contributions\n\nThis is a hybrid role based in San Francisco. Competitive salary and equity."
+}
+
+
+Step 1-JD Parser Agent
+{
+  "job_title": "Senior Software Engineer - Full Stack",
+  "required_skills": [
+    "JavaScript/TypeScript",
+    "React",
+    "Node.js",
+    "AWS or GCP",
+    "SQL and NoSQL",
+    "RESTful APIs",
+    "GraphQL"
+  ],
+  "experience_years": 5,
+  "nice_to_have": [
+    "DevOps practices (CI/CD, Docker, Kubernetes)",
+    "Fintech or payments industry experience",
+    "Open source contributions"
+  ],
+  "location": "San Francisco",
+  "employment_type": "Hybrid"
+}
+
+
+Step 2-Candidate Discovery Agent
+
+{
+  "candidates": [
+    {
+      "name": "Sarah Chen",
+      "title": "Senior Developer at TechCorp",
+      "years_experience": 7,
+      "skills": ["React", "Node.js", "AWS", "TypeScript", "GraphQL"],
+      "match_score": 92,
+      "match_explanation": "Strong match - 5+ years experience, all core skills (React, Node.js, TypeScript, AWS) match exactly. Experience with GraphQL is a plus."
+    },
+    {
+      "name": "Marcus Johnson",
+      "title": "Full Stack Engineer at StartupX",
+      "years_experience": 5,
+      "skills": ["React", "Node.js", "Python", "SQL", "PostgreSQL"],
+      "match_score": 85,
+      "match_explanation": "Good match - meets experience requirement, has React/Node.js. Missing cloud experience but strong SQL skills."
+    },
+    {
+      "name": "Emily Rodriguez",
+      "title": "Software Engineer at BigTech Inc",
+      "years_experience": 4,
+      "skills": ["JavaScript", "React", "GCP", "MongoDB", "REST APIs"],
+      "match_score": 78,
+      "match_explanation": "Partial match - nearly meets experience (4 vs 5 years), has React and cloud (GCP) but missing TypeScript and Node.js."
+    },
+    {
+      "name": "David Kim",
+      "title": "Backend Developer at FinanceHub",
+      "years_experience": 6,
+      "skills": ["Node.js", "AWS", "PostgreSQL", "Docker", "Redis"],
+      "match_score": 88,
+      "match_explanation": "Strong backend match - exceeds experience, has Node.js, AWS, PostgreSQL. Missing React/TypeScript frontend skills."
+    },
+    {
+      "name": "Lisa Thompson",
+      "title": "Lead Developer at MediaCo",
+      "years_experience": 8,
+      "skills": ["React", "TypeScript", "Kubernetes", "GraphQL", "AWS"],
+      "match_score": 95,
+      "match_explanation": "Excellent match - 8 years experience, all core skills present including TypeScript, React, GraphQL, and cloud. Nice-to-have Kubernetes experience."
+    }
+  ]
+}
+
+
+Step-3 Interest Assessment Agent
+
+{
+  "ranked_candidates": [
+    {
+      "name": "Sarah Chen",
+      "title": "Senior Developer at TechCorp",
+      "skills": ["React", "Node.js", "AWS", "TypeScript", "GraphQL"],
+      "match_score": 92,
+      "interest_score": 85,
+      "match_explanation": "Strong match - 5+ years experience, all core skills match exactly.",
+      "conversation_summary": "Sarah responded: 'That sounds interesting! I've been looking for a hybrid role that lets me work on both frontend and backend. San Francisco is great - I'm already based there. Can you tell me more about the tech stack and team size?'"
+    },
+    {
+      "name": "Lisa Thompson",
+      "title": "Lead Developer at MediaCo",
+      "skills": ["React", "TypeScript", "Kubernetes", "GraphQL", "AWS"],
+      "match_score": 95,
+      "interest_score": 70,
+      "match_explanation": "Excellent match - 8 years experience, all core skills present.",
+      "conversation_summary": "Lisa responded: 'Thanks for reaching out. I'm currently happy at MediaCo but open to the right opportunity. The hybrid aspect is appealing, but I'd need to discuss the compensation and growth opportunities. Can you share more details?'"
+    },
+    {
+      "name": "David Kim",
+      "title": "Backend Developer at FinanceHub",
+      "skills": ["Node.js", "AWS", "PostgreSQL", "Docker", "Redis"],
+      "match_score": 88,
+      "interest_score": 75,
+      "match_explanation": "Strong backend match - exceeds experience requirement.",
+      "conversation_summary": "David responded: 'I'm definitely interested! I've been wanting to transition to a more full-stack role. The fintech experience I have now would be a great fit. When can we schedule a call?'"
+    },
+    {
+      "name": "Marcus Johnson",
+      "title": "Full Stack Engineer at StartupX",
+      "skills": ["React", "Node.js", "Python", "SQL", "PostgreSQL"],
+      "match_score": 85,
+      "interest_score": 60,
+      "match_explanation": "Good match - meets experience requirement.",
+      "conversation_summary": "Marcus responded: 'Thanks for thinking of me. I'm currently enjoying the startup life and not actively looking, but I'm open to hearing more. What are the main challenges the team is facing?'"
+    },
+    {
+      "name": "Emily Rodriguez",
+      "title": "Software Engineer at BigTech Inc",
+      "skills": ["JavaScript", "React", "GCP", "MongoDB", "REST APIs"],
+      "match_score": 78,
+      "interest_score": 55,
+      "match_explanation": "Partial match - nearly meets experience requirement.",
+      "conversation_summary": "Emily responded: 'I'm flattered! I'm actually looking to move away from BigTech to something more fast-paced. However, I'm only 4 years into my career and not sure I'm ready for a Senior role yet. Maybe keep me in mind for mid-level positions?'"
+    }
+  ]
+}
+
+
+Results
+
+{
+  "results": [
+    {
+      "rank": 1,
+      "name": "Sarah Chen",
+      "title": "Senior Developer at TechCorp",
+      "skills": ["React", "Node.js", "AWS", "TypeScript", "GraphQL"],
+      "match_score": 92,
+      "interest_score": 85,
+      "combined_score": 88,
+      "match_explanation": "Strong match - 5+ years experience, all core skills match exactly.",
+      "conversation_summary": "Sarah responded positively, asking about tech stack and team size. Already based in San Francisco.",
+      "recommendation": "HIGH PRIORITY - Strong interest and excellent skills match"
+    },
+    {
+      "rank": 2,
+      "name": "Lisa Thompson",
+      "title": "Lead Developer at MediaCo",
+      "skills": ["React", "TypeScript", "Kubernetes", "GraphQL", "AWS"],
+      "match_score": 95,
+      "interest_score": 70,
+      "combined_score": 82,
+      "match_explanation": "Excellent match - 8 years experience, all core skills present.",
+      "conversation_summary": "Interested but cautious. Wants to discuss compensation and growth opportunities.",
+      "recommendation": "STRONG CANDIDATE - Best skills match, moderate interest"
+    },
+    {
+      "rank": 3,
+      "name": "David Kim",
+      "title": "Backend Developer at FinanceHub",
+      "skills": ["Node.js", "AWS", "PostgreSQL", "Docker", "Redis"],
+      "match_score": 88,
+      "interest_score": 75,
+      "combined_score": 81,
+      "match_explanation": "Strong backend match - exceeds experience requirement.",
+      "conversation_summary": "Very interested! Wants to transition to full-stack. Asking to schedule a call.",
+      "recommendation": "HIGH PRIORITY - Good interest and backend strength"
+    },
+    {
+      "rank": 4,
+      "name": "Marcus Johnson",
+      "title": "Full Stack Engineer at StartupX",
+      "skills": ["React", "Node.js", "Python", "SQL", "PostgreSQL"],
+      "match_score": 85,
+      "interest_score": 60,
+      "combined_score": 72,
+      "match_explanation": "Good match - meets experience requirement.",
+      "conversation_summary": "Not actively looking but open to hearing more. Asked about team challenges.",
+      "recommendation": "MEDIUM PRIORITY - Decent match, low urgency"
+    },
+    {
+      "rank": 5,
+      "name": "Emily Rodriguez",
+      "title": "Software Engineer at BigTech Inc",
+      "skills": ["JavaScript", "React", "GCP", "MongoDB", "REST APIs"],
+      "match_score": 78,
+      "interest_score": 55,
+      "combined_score": 66,
+      "match_explanation": "Partial match - nearly meets experience requirement.",
+      "conversation_summary": "Flattered but unsure about Senior level. Open to mid-level positions.",
+      "recommendation": "LOW PRIORITY - Consider for mid-level roles"
+    }
+  ],
+  "summary": {
+    "total_candidates": 5,
+    "high_priority": 2,
+    "medium_priority": 1,
+    "low_priority": 1,
+    "average_match_score": 87.6,
+    "average_interest_score": 69.0
+  }
+}
+
