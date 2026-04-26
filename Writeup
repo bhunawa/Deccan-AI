@@ -1,0 +1,70 @@
+Deccan Al
+
+Assignment Workflow Write-up
+
+Approach
+
+This workflow implements an Al-
+
+powered recruiting pipeline that takes a job description as input and returns a ranked list of interested, qualified candidates. The system combines LLM-based agents with structured data (Google Sheets) and presents results via an interactive dashboard.
+
+Core Philosophy: Automate the top- of-funnel candidate sourcing and interest qualification using Al agents, while keeping human oversight
+
+Architecture 
+┌─────────────────┐
+│  Form Trigger   │  (JD Input)
+│  (Webhook)      │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  JD Parser      │  ← Extracts: skills, experience, qualifications
+│  (Agent)        │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐     ┌─────────────────┐
+│  Google Sheets  │     │  Candidate      │
+│  (Candidate DB) │────▶│  Discovery      │  ← Matches candidates to JD
+└─────────────────┘     └────────┬────────┘
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │  Interest       │  ← Simulates outreach,
+                        │  Assessment     │    assesses interest
+                        └────────┬────────┘
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │  Results        │
+                        │  Dashboard      │  ← Ranked, filterable UI
+                        └─────────────────┘
+
+Scoring Criteria
+Match Score (0-100)
+95-100: All required skills + nice-to-have skills + exceeds experience requirements
+85-94: All required skills + meets experience requirements
+75-84: Most required skills + partial experience
+60-74: Some required skills + limited experience
+Below 60: Few matching skills or insufficient experience
+Interest Score (0-100)
+90-100: Strong excitement, immediately available, eager to discuss
+75-89: Genuine interest, wants to learn more about role/team
+60-74: Moderate interest, some questions or concerns
+Below 60: Low interest, not actively looking, or unavailable
+ Ranking Methodology
+Final Ranking = (Match Score + Interest Score) / 2
+
+Candidates are sorted by combined score in descending order. The dashboard displays:
+
+Combined score (ranking position)
+Individual Match and Interest scores with visual progress bars
+Color coding: Green (≥80), Yellow (60-79), Red (<60)
+
+
+Trade-offs
+Trade-off	Rationale
+LLM-based matching vs. strict filtering	Used LLMs for flexible, semantic matching rather than rigid keyword filters. Trade-off: slightly higher latency and cost, but better recall on qualified candidates who don't use exact keywords.
+Simulated interest assessment	Instead of actually emailing candidates, the agent simulates a conversation to predict interest. Trade-off: not real-world validation, but enables rapid prototyping without spam risk.
+Google Sheets as database	Simple, familiar storage for candidate data. Trade-off: no real-time sync, limited query performance at scale.
+Single dashboard output	Results flow to a UI rather than automated actions (e.g., auto-email). Trade-off: requires manual follow-up, but gives recruiters full control.
